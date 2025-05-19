@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>John Doe | Cybersecurity Specialist</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #64ffda;
+            --secondary: #0a192f;
+            --text: #8892b0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--secondary);
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
+
+        /* Cyber Grid Background */
+        .cyber-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background-image: 
+                linear-gradient(rgba(100, 255, 218, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(100, 255, 218, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+
+        /* Hero Section */
+        #hero {
+            text-align: center;
+        }
+        .hero-name {
+            font-size: 4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            margin: 1rem;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .cta-btn:hover {
+            background: rgba(100, 255, 218, 0.1);
+        }
+
+        /* About Section */
+        .about-content {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 4rem;
+        }
+        .platform-badges {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        .badge {
+            padding: 0.5rem 1rem;
+            background: rgba(100, 255, 218, 0.1);
+            border-radius: 5px;
+        }
+        .counter {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        .skill-card {
+            background: rgba(100, 255, 218, 0.1);
+            padding: 2rem;
+            border-radius: 5px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+        .skill-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .project-card {
+            background: #0a192f;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            border-radius: 5px;
+            padding: 1.5rem;
+            position: relative;
+        }
+        .project-image {
+            height: 200px;
+            background-size: cover;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .form-input {
+            width: 100%;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: white;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .social-link {
+            font-size: 1.5rem;
+            color: var(--text);
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .hero-name {
+                font-size: 2.5rem;
+            }
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="cyber-grid"></div>
+    
+    <!-- Hero Section -->
+    <section id="hero" data-aos="fade-up">
+        <div class="hero-content">
+            <h1 class="hero-name">John Doe</h1>
+            <h2>Cybersecurity Enthusiast & Self-Learner</h2>
+            <p>"Exploring the world of digital security, one packet at a time."</p>
+            <div class="cta-container">
+                <a href="#projects" class="cta-btn">View Projects</a>
+                <a href="#contact" class="cta-btn">Connect with Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-content" data-aos="fade-right">
+            <div>
+                <h2>About Me</h2>
+                <p>I'm a cybersecurity student passionate about ethical hacking and network security. Currently exploring platforms like TryHackMe and Hack The Box while building my skills in penetration testing and vulnerability analysis.</p>
+                <div class="platform-badges">
+                    <div class="badge">TryHackMe</div>
+                    <div class="badge">Hack The Box</div>
+                    <div class="badge">CTFtime</div>
+                </div>
+                <div class="counters">
+                    <div>
+                        <div class="counter">500+</div>
+                        <p>Hours Learning</p>
+                    </div>
+                    <div>
+                        <div class="counter">100+</div>
+                        <p>Challenges Solved</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 data-aos="fade-up">Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-card" data-aos="zoom-in">
+                <i class="fab fa-linux skill-icon"></i>
+                <h3>Linux Systems</h3>
+                <p>Proficient in Kali Linux and Bash scripting</p>
+            </div>
+            <!-- Add more skill cards -->
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 data-aos="fade-up">My Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-aos="flip-up">
+                <div class="project-image" style="background-image: url('project1.jpg')"></div>
+                <h3>Network Scanner</h3>
+                <p>Python-based network scanning utility using Scapy</p>
+                <div class="tech-stack">
+                    <span class="badge">Python</span>
+                    <span class="badge">Scapy</span>
+                </div>
+                <a href="#" class="cta-btn">View Code</a>
+            </div>
+            <!-- Add more project cards -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 data-aos="fade-up">Get in Touch</h2>
+        <form class="contact-form" data-aos="zoom-in">
+            <input type="text" class="form-input" placeholder="Name">
+            <input type="email" class="form-input" placeholder="Email">
+            <textarea class="form-input" rows="5" placeholder="Message"></textarea>
+            <button type="submit" class="cta-btn">Send Message</button>
+        </form>
+        <div class="social-links">
+            <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-discord"></i></a>
+            <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Animate counters
+        const counters = document.querySelectorAll('.counter');
+        counters.forEach(counter => {
+            const target = +counter.innerText;
+            let count = 0;
+            const updateCount = () => {
+                const increment = target / 100;
+                if(count < target) {
+                    count += increment;
+                    counter.innerText = Math.ceil(count);
+                    setTimeout(updateCount, 10);
+                }
+            }
+            updateCount();
+        });
+    </script>
+</body>
+</html>
